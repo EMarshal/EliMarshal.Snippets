@@ -1,8 +1,4 @@
-﻿// <copyright file="SQLLimitedRangeAttribute.cs" company="Éli Marshal">
-//     Copyright (c) Éli Marshal. All rights reserved.
-// </copyright>
-
-namespace EliMarshal.ClassLibrary
+﻿namespace EliMarshal.ClassLibrary
 {
     using System.ComponentModel.DataAnnotations;
 

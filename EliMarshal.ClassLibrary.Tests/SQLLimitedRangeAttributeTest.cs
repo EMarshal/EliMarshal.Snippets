@@ -1,8 +1,4 @@
-﻿// <copyright file="SQLLimitedRangeAttributeTest.cs" company="Éli Marshal">
-//     Copyright (c) Éli Marshal. All rights reserved.
-// </copyright>
-
-namespace EliMarshal.ClassLibrary.Tests
+﻿namespace EliMarshal.ClassLibrary.Tests
 {
     using Xunit;
 
