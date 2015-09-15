@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliMarshal.ClassLibrary", "EliMarshal.ClassLibrary\EliMarshal.ClassLibrary.csproj", "{7DE8718E-BA73-4880-AD9D-2B3864797FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliMarshal.ClassLibrary.Tests", "EliMarshal.ClassLibrary.Tests\EliMarshal.ClassLibrary.Tests.csproj", "{716D7CA3-4204-4B13-A1D9-23D7A22D9C82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DE8718E-BA73-4880-AD9D-2B3864797FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE8718E-BA73-4880-AD9D-2B3864797FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE8718E-BA73-4880-AD9D-2B3864797FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE8718E-BA73-4880-AD9D-2B3864797FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{716D7CA3-4204-4B13-A1D9-23D7A22D9C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716D7CA3-4204-4B13-A1D9-23D7A22D9C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716D7CA3-4204-4B13-A1D9-23D7A22D9C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716D7CA3-4204-4B13-A1D9-23D7A22D9C82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
