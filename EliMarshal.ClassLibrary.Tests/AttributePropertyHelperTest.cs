@@ -29,8 +29,10 @@
         public void TestSetMaxLengthWithNullDataContext()
         {
             StringLengthTestClass testObject = new StringLengthTestClass();
-            Binding myBinding = new Binding("StringLengthProperty");
-            myBinding.Source = testObject;
+            Binding myBinding = new Binding("StringLengthProperty")
+            {
+                Source = testObject
+            };
 
             editor.SetBinding(TextBox.TextProperty, myBinding);
             AttributePropertySetter.SetAttributeProperty(editor);
@@ -42,8 +44,10 @@
         {
             var invalidEditor = new RichTextBox();
             StringLengthTestClass testObject = new StringLengthTestClass();
-            Binding myBinding = new Binding("StringLengthProperty");
-            myBinding.Source = testObject;
+            Binding myBinding = new Binding("StringLengthProperty")
+            {
+                Source = testObject
+            };
 
             invalidEditor.SetBinding(TextBox.TextProperty, myBinding);
             Assert.Throws<ArgumentException>(() => AttributePropertySetter.SetAttributeProperty(invalidEditor));
@@ -54,8 +58,10 @@
         {
             editor.DataContext = Substitute.For<object>();
             StringLengthTestClass testObject = new StringLengthTestClass();
-            Binding myBinding = new Binding("StringLengthProperty");
-            myBinding.Source = testObject;
+            Binding myBinding = new Binding("StringLengthProperty")
+            {
+                Source = testObject
+            };
 
             editor.SetBinding(TextBox.TextProperty, myBinding);
             AttributePropertySetter.SetAttributeProperty(editor);
@@ -78,8 +84,10 @@
         {
             editor.DataContext = Substitute.For<object>();
             StringLengthTestClass myMockObject = new ChildStringLengthTestClass();
-            Binding myBinding = new Binding("StringLengthProperty");
-            myBinding.Source = myMockObject;
+            Binding myBinding = new Binding("StringLengthProperty")
+            {
+                Source = myMockObject
+            };
 
             editor.SetBinding(TextBox.TextProperty, myBinding);
             AttributePropertySetter.SetAttributeProperty(editor);
