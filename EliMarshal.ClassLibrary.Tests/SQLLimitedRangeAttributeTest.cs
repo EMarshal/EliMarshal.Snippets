@@ -7,9 +7,10 @@
         [Fact]
         public void ShouldValidateMoneyDecimal()
         {
-            SQLLimitedRangeTestClass test = new SQLLimitedRangeTestClass();
-
-            test.TestMoneyDecimal = 0;
+            SQLLimitedRangeTestClass test = new SQLLimitedRangeTestClass
+            {
+                TestMoneyDecimal = 0
+            };
             Assert.True(test.IsValid("TestMoneyDecimal"));
 
             test.TestMoneyDecimal = 9999999.99M;
@@ -28,9 +29,10 @@
         [Fact]
         public void ShouldValidatePercentDecimal()
         {
-            SQLLimitedRangeTestClass test = new SQLLimitedRangeTestClass();
-
-            test.TestPercentDecimal = 0;
+            SQLLimitedRangeTestClass test = new SQLLimitedRangeTestClass
+            {
+                TestPercentDecimal = 0
+            };
             Assert.True(test.IsValid("TestPercentDecimal"));
 
             test.TestPercentDecimal = 9999.99999M;

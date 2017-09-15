@@ -76,8 +76,7 @@
         {
             if (prop != null)
             {
-                var stringLengthAtt = Attribute.GetCustomAttributes(prop, typeof(StringLengthAttribute), true).FirstOrDefault() as StringLengthAttribute;
-                if (stringLengthAtt != null)
+                if (Attribute.GetCustomAttributes(prop, typeof(StringLengthAttribute), true).FirstOrDefault() is StringLengthAttribute stringLengthAtt)
                 {
                     if (editor is TextBox)
                     {
