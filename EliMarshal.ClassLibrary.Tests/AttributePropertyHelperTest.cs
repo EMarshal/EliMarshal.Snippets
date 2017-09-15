@@ -1,7 +1,7 @@
 ﻿namespace EliMarshal.ClassLibrary.Tests
 {
     using AttributePropertyHelper;
-    using FakeItEasy;
+    using NSubstitute;
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.Windows.Controls;
@@ -20,7 +20,7 @@
         [WpfFact]
         public void TestSetMaxLengthWithNullBinding()
         {
-            editor.DataContext = A.Fake<object>();
+            editor.DataContext = Substitute.For<object>();
             AttributePropertySetter.SetAttributeProperty(editor);
             Assert.Equal(0, editor.MaxLength);
         }
@@ -52,7 +52,7 @@
         [WpfFact]
         public void TestSetMaxLengthBindingHasResolvedSourceWithTextBinding()
         {
-            editor.DataContext = A.Fake<object>();
+            editor.DataContext = Substitute.For<object>();
             StringLengthTestClass testObject = new StringLengthTestClass();
             Binding myBinding = new Binding("StringLengthProperty");
             myBinding.Source = testObject;
@@ -65,7 +65,7 @@
         [WpfFact]
         public void TestSetMaxLengthBindingDoesNotHaveResolvedSourceAndContextItemIsNull()
         {
-            editor.DataContext = A.Fake<object>();
+            editor.DataContext = Substitute.For<object>();
             Binding myBinding = new Binding("StringLengthProperty");
 
             editor.SetBinding(TextBox.TextProperty, myBinding);
@@ -76,7 +76,7 @@
         [WpfFact]
         public void TestSetMaxLengthBindingWhenAttributeIsInherited()
         {
-            editor.DataContext = A.Fake<object>();
+            editor.DataContext = Substitute.For<object>();
             StringLengthTestClass myMockObject = new ChildStringLengthTestClass();
             Binding myBinding = new Binding("StringLengthProperty");
             myBinding.Source = myMockObject;
