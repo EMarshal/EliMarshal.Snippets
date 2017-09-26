@@ -32,7 +32,7 @@
                 return;
             }
 
-            // Can't effectively test this as is, as .GetProperty() can't be intercepted by FakeItEasy
+            // Can't effectively test this as is, as .GetProperty() can't be intercepted
             PropertyInfo itemProp = context.GetType().GetProperty("Item");
             if (itemProp != null && itemProp.GetSetMethod() != null)
             {

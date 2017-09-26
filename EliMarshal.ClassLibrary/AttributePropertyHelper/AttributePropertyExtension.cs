@@ -67,22 +67,9 @@
         {
             var behaviors = Interaction.GetBehaviors(d);
 
-            if ((bool)e.NewValue)
+            if (!behaviors.OfType<AttributePropertyBehavior>().Any())
             {
-                if (!behaviors.OfType<T>().Any())
-                {
-                    behaviors.Add(new AttributePropertyBehavior());
-                }
-            }
-            else
-            {
-                foreach (var item in behaviors.ToArray())
-                {
-                    if (item is T)
-                    {
-                        behaviors.Remove(item);
-                    }
-                }
+                behaviors.Add(new AttributePropertyBehavior());
             }
         }
 
